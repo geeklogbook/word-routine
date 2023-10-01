@@ -3,17 +3,12 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-9g0=a7hn=oa&)jc#*np516cv*vh2^&p&20g7k730jy49bb6i4*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['word-routine.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+DEBUG = False
 
 
 # Application definition

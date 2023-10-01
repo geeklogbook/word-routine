@@ -28,7 +28,7 @@ class EntryDetailView(DetailView):
 class EntryCreateView(LockedView, SuccessMessageMixin, CreateView):
     model = Entry
     fields = ["title", "content"]
-    success_url = reverse_lazy("entry-list")
+    success_url = reverse_lazy("/entries/entry-list")
     success_message = "Your new entry was created"
 
 class EntryUpdateView(LockedView, SuccessMessageMixin, UpdateView):
@@ -44,7 +44,7 @@ class EntryUpdateView(LockedView, SuccessMessageMixin, UpdateView):
 
 class EntryDeleteView(LockedView, DeleteView):
     model = Entry
-    success_url = reverse_lazy("entry-list")
+    success_url = reverse_lazy("/entries/entry-list")
     success_message = "Your entry was deleted!"
 
     def delete(self, request, *args, **kwargs):
